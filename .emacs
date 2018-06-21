@@ -1,3 +1,6 @@
+
+(setq-default indent-tabs-mode nil)
+
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
@@ -12,8 +15,6 @@
 ;(load "~/.emacs.d/go-mode.el")
 ;(load "~/.emacs.d/go-rename.el")
 
-(setq-default indent-tabs-mode nil)
-
 (hc-toggle-highlight-tabs)
 ;;(column-marker-1)
 (add-hook 'c-mode-hook (lambda () (interactive) (column-marker-3 80)))
@@ -27,6 +28,10 @@
 (add-hook 'json-mode-hook (lambda () (interactive) (column-marker-3 80)))
 (add-hook 'java-mode-hook (lambda () (interactive) (column-marker-3 80)))
 (add-hook 'sh-mode-hook (lambda () (interactive) (column-marker-3 80)))
+(add-hook 'go-mode-hook (lambda () 
+                          (setq tab-width 2)
+                          (setq indent-tabs-mode nil)
+                          (interactive) (column-marker-3 80)))
 
 ;; hc-toggle-highlight-tabs
 ;; C-u column-marker-3
