@@ -2,6 +2,9 @@
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
+;M-x package-list-package
+;M-x package-install go-mode docker-compose-mode
+
 (load "~/.emacs.d/highlight-chars.el")
 (load "~/.emacs.d/column-marker.el")
 
